@@ -1,0 +1,165 @@
+-- ✅ MẪU CHUẨN CHO NGƯỜI MỚI | TÉO HUB 🍎
+-- Giữ nguyên giao diện thật, chỉ thêm hướng dẫn 👈 ngay bên cạnh dòng cần sửa
+
+repeat task.wait() until game:IsLoaded()
+
+-- 🟢 Nút mở menu chính
+local ScreenGui = Instance.new("ScreenGui")
+local ImageButton = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.10615778, 0, 0.16217947, 0)
+ImageButton.Size = UDim2.new(0, 40, 0, 40)
+ImageButton.Draggable = true
+ImageButton.Image = "http://www.roblox.com/asset/?id=132996098708787"  -- 👈 đổi ID ảnh nút mở menu tại đây (ảnh roblox)
+
+UICorner.CornerRadius = UDim.new(1, 10)
+UICorner.Parent = ImageButton
+
+ImageButton.MouseButton1Down:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.End, false, game)
+end)
+
+-- 🟣 Giao diện Fluent
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+repeat wait() until game:IsLoaded()
+
+-- 🪟 Cửa sổ chính
+local Window = Fluent:CreateWindow({
+	Title = "Tung Tung tonghopV1 =}",         -- 👈 đổi thành tên script của bạn
+	SubTitle = "Premium 🤑🇻🇳",              -- 👈 đổi mô tả phụ
+	TabWidth = 157,
+	Size = UDim2.fromOffset(450, 300),
+	Acrylic = true,
+	Theme = "Light",                   -- 👈 đổi màu chủ đạo: Amethyst, Dark, Aqua, Light,...
+	MinimizeKey = Enum.KeyCode.End
+})
+
+-- 📑 Các tab (mục chính)
+local Tabs = {
+	Main0 = Window:AddTab({ Title = "Tiktok: Cooiemthemdauphu" }),  -- 👈 đổi tên tab 1
+	Main1 = Window:AddTab({ Title = "Blox fruit🖕" }),  -- 👈 đổi tên tab 2
+	Main2 = Window:AddTab({ Title = "Plants Vs Brainrots👉👈" }),     -- 👈 đổi tên tab 3
+	Main3 = Window:AddTab({ Title = "99 đêm👾" }),        -- 👈 đổi tên tab 4
+	Main4 = Window:AddTab({ Title = "Steal a Brainrots 👹" }),    -- 👈 đổi tên tab 5
+	Main5 = Window:AddTab({ Title = "Fix lag 👾❤️" }) -- 👈 đổi tên tab 6
+}
+
+------------------------------------------------
+-- TAB 1: Các kênh tiktok
+------------------------------------------------
+Tabs.Main0:AddButton({
+	Title = "tiktok: Cooiemthemdauphu)",              -- 👈 tên nút
+	Description = "oách xà lách vô cùng",-- 👈 mô tả nút
+	Callback = function()
+		setclipboard("https://www.tiktok.com/@jannie3342?_t=ZS-90QsJQ5j0NO&_r=1")  -- 👈 link sao chép
+	end
+})
+
+Tabs.Main0:AddButton({
+	Title = "tik",
+	Description = "làm chơi thui",
+	Callback = function()
+		setclipboard("https://www.tiktok.com/@b.yt03?_t=ZS-90QsHokNlwN&_r=1")     -- 👈 link khác
+	end
+})
+
+Tabs.Main0:AddButton({
+	Title = "tiktok",
+	Description = "flo Tiktok cu sẽ to",
+	Callback = function()
+		setclipboard("https://www.tiktok.com/@b.yt03?_t=ZS-90QsHmSjaiu&_r=1")
+	end
+})
+
+------------------------------------------------
+-- TAB 2: Ví dụ thêm script
+------------------------------------------------
+Tabs.Main1:AddButton({
+	Title = "Gravity Hub",                             -- 👈 tên nút hiển thị
+	Description = "script này ngon lâu lâu lỗi thôi nhưng đủ chức năng cả❤️",-- 👈 mô tả
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))()
+Tabs.Main1:AddButton({
+	Title = "Akgaming",                             -- 👈 tên nút hiển thị
+	Description = "script này đủ chức năng",-- 👈 mô tả
+	Callback = function()
+		getgenv().Team = "Pirates"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Teddyseetink/AkGamingEz/refs/heads/main/AkGaming-V3"))()
+Tabs.Main1:AddButton({
+	Title = "Masterhub(doremon)",                             -- 👈 tên nút hiển thị
+	Description = "script này ngon chẳng biết nói gì🇻🇳",-- 👈 mô tả
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/KiddoHiru/BloxFruits/main/MasterHub.lua"))()
+Tabs.Main1:AddButton({
+	Title = "Quantum hub",                             -- 👈 tên nút hiển thị
+	Description = "script này ổn ",-- 👈 mô tả
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"))()	
+Tabs.Main2:AddButton({
+	Title = "Speed hub",                             -- 👈 tên nút hiển thị
+	Description = "script này toàn diện chẳng biết nói gì🇻🇳",-- 👈 mô tả
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+Tabs.Main2:AddButton({
+	Title = "Shift lock",                             -- 👈 tên nút hiển thị
+	Description = "script này khi ko có Shift lock",-- 👈 mô tả
+	Callback = function()
+		loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Mobile-Shiftlock-12348"))()
+Tabs.Main2:AddButton({
+	Title = "Silent hub",                             -- 👈 tên nút hiển thị
+	Description = "script này ngon như speed hub nhưng hơi lỗi",-- 👈 mô tả
+	Callback = function()
+loadstring(game:HttpGet("https://pastefy.app/2DsuRU5s/raw"))()	
+Tabs.Main3:AddButton({
+	Title = "H4x hub",                             -- 👈 tên nút hiển thị
+	Description = "script này có key",-- 👈 mô tả
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/H4xScripts/Loader/refs/heads/main/loader.lua", true))()
+Tabs.Main3:AddButton({
+	Title = "Masterhub(doremon)",                             -- 👈 tên nút hiển thị
+	Description = "script này no key",-- 👈 mô tả
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/caomod2077/Script/refs/heads/main/FoxnameHub.lua"))()
+Tabs.Main3:AddButton({
+	Title = "Voidware hub",                             -- 👈 tên nút hiển thị
+	Description = "script này cũng no key",-- 👈 mô tả
+	Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/nightsintheforest.lua", true))()
+Tabs.Main3:AddButton({
+	Title = "Gec hub",                             -- 👈 tên nút hiển thị
+	Description = "script này chẳng biết nói gì",-- 👈 mô tả
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GEC0/gec/refs/heads/main/Gec.Loader", true))()
+Tabs.Main4:AddButton({
+	Title = "chili hub",                             -- 👈 tên nút hiển thị
+	Description = "script này ko bt nói j",-- 👈 mô tả
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/tienkhanh1/spicy/main/chilli.lua"))()
+Tabs.Main4:AddButton({
+	Title = "Miranda hub",                             -- 👈 tên nút hiển thị
+	Description = "script này chẳng biết nói gì",-- 👈 mô tả
+	Callback = function()
+	  loadstring(game:HttpGet("https://pastefy.app/JJVhs3rK/raw"))()
+Tabs.Main5:AddButton({
+	Title = "kéo gián màn hình",                             -- 👈 tên nút hiển thị
+	Description = "script này gián màn hình ",-- 👈 mô tả
+	Callback = function()
+		getgenv().Resolution = { [".gg/scripters"] = 0.75 } local Camera = workspace.CurrentCamera if getgenv().gg_scripters == nil then game:GetService("RunService").RenderStepped:Connect( function() Camera.CFrame = Camera.CFrame * CFrame.new(0, 0, 0, 1, 0, 0, 0, getgenv().Resolution[".gg/scripters"], 0, 0, 0, 1) end ) end getgenv().gg_scripters = "Aori0001"
+Tabs.Main5:AddButton({
+	Title = "fix lag",                             -- 👈 tên nút hiển thị
+	Description = "script này fix lag",-- 👈 mô tả
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletgojo/Haidepzai/refs/heads/main/AKGAMING-FIXLAG"))()
+Tabs.Main5:AddButton({
+	Title = "fix lag 2",                             -- 👈 tên nút hiển thị
+	Description = "script này fix lag 2",-- 👈 mô tả
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))()
+		end
